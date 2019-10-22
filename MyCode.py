@@ -1,13 +1,13 @@
 
+for x in range(23, 10, -2):
+    if x % 5 != 0:
+         print(x)
 
-i = 5
+for r in [3, 2.8, "Mohamed"]:
+    print(r)
 
+x = "al-Mohamady"
 
-while i >= 1:
-    print("al Mohamady -> ", end="")
-    j = 1
-    while j <= 5:
-        print("*", end="")
-        j += 1
-    i = i - 1
-    print()
+for i in x:
+     print(i)
+
