@@ -1,36 +1,16 @@
 
-for i in range(1, 200):
 
-    if i % 5 == 0:
-       pass
-    else:
-       print(i)
+for i in range(4):
+    for j in range(4 - i):
+        print("# ", end="")
+    print()
 
-print("Hello world")
-#===================================================
+for i in range(4):
+    for j in range(i + 1):
+        print("# ", end="")
+    print()
 
-for i in range(1, 200):
-
-    if i % 5 != 0:
-        continue
-
-    print(i)
-
-print("Hello world")
-
-#===================================================
-
-x = int(input("How Many Boxes in the inventory: "))
-a = 20
-
-i = 1
-while i <= x:
-
-    if i > a:
-        print("Error: Out of Stock")
-        break
-
-    print("Box Num " + str(i))
-    i += 1
-
-print("Hello World")
+for i in range(4):
+    for j in range(4):
+        print("# ", end="")
+    print()
