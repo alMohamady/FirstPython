@@ -1,23 +1,29 @@
-import sys
-
-print("Hello World")
-print("My First Code")
-a = int(sys.argv[1])
-b = int(sys.argv[2])
-c = a + b
-print(c)
-
-print("Hello World")
-
-result = eval(input("Enter the operation"))
-print(result)
 
 
-ch = input("Enter the Char")[0]
-print(ch)
+x = 5
+
+if x == 1:
+    print("x = 1")
+elif x == 2:
+    print("x = 2")
+elif x == 3:
+    print("x = 3")
+else:
+    print("Nothing")
 
 
-a = int(input("Enter the a number: "))
-b = int(input("Enter the b number: "))
-c = a + b
-print(c)
+a = 2
+b = a % 2
+
+if b == 0:
+    print("Even")
+    if a > 10:
+        print("big number")
+    else:
+        print("Small")
+else:
+    print("odd")
+
+
+print("it's Oky")
+
