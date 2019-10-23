@@ -1,16 +1,9 @@
 
+numbers = [11, 22, 33, 40, 55, 115, 20]
 
-for i in range(4):
-    for j in range(4 - i):
-        print("# ", end="")
-    print()
-
-for i in range(4):
-    for j in range(i + 1):
-        print("# ", end="")
-    print()
-
-for i in range(4):
-    for j in range(4):
-        print("# ", end="")
-    print()
+for number in numbers:
+    if number % 2 == 0 and number % 3 == 0:
+        print(number)
+        break
+else:
+    print("Not found")
