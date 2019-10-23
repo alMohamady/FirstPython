@@ -1,18 +1,23 @@
 from array import *
 
-arr = array('i', [5, 6, 7, 8])
-arr2 = array('u', ['a', 'b', 'c', 'd'])
+arr = array('i', [])
 
-arr3 = array(arr.typecode, (a + 10 for a in arr))
+num = int(input("Enter the array count: "))
 
-for i in arr3:
-    print(i)
+for i in range(num):
+    x = int(input("Enter the value number " + str(i) + " : "))
+    arr.append(x)
 
-for i in arr2:
-    print(i)
+print(arr)
 
-for i in range(len(arr)):
-    print(arr[i])
+val = int(input("Enter the value : "))
 
+index = 0
 for i in arr:
-    print(i)
+    if i == val:
+        print(str(i) + " With index  " + str(index))
+        break
+    index += 1
+
+
+print(str(val) + " With index  " + str(arr.index(val)))
