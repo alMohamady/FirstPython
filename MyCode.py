@@ -1,20 +1,24 @@
-def hello():
-    print("Hello World")
-    print("Al Mohamady")
 
-hello()
+#By Ref
+def func1(x):
+    print(id(x))
+    x[1] = 30
+    print("x " ,x)
+    print(id(x))
 
-def add(x, y):
-    n = x + y
-    return n
+lst = [ 10, 12, 14]
+print(id(lst))
+func1(lst)
+print("a ", lst)
 
-def add_sub(x, y):
-    n = x + y
-    x = x - y
-    return n, x
+#By Val
+def func0(x):
+    print(id(x))
+    x = 10
+    print("x " ,x)
+    print(id(x))
 
-z, b = add_sub(20, 12)
-print("add :",z)
-print("sub :",b)
-print(add(5, 3) + 2)
-print("MY CODE")
+a = 20
+print(id(a))
+func0(a)
+print( "a ", a)
