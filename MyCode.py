@@ -1,22 +1,15 @@
 from numpy import *
 
-arr6 = ones(10, int)
-print(arr6)
+arr0 = array([11, 22, 33, 44, 55])
+arrZ = arr0.copy()
 
-arr5 = zeros(5)
-print(arr5)
+arr0[1] = 88
 
-arr4 = logspace(1, 15, 20)
-print(arr4)
+print(arr0)
+print(arrZ)
 
-arr3 = arange(1, 15, 2)
-print(arr3)
+print(id(arr0))
+print(id(arrZ))
 
-arr2 = linspace(0, 15)
-print(arr2)
-
-arr = array([1, 2, 3, 4.5, 5, 6, 7])
-print(arr.dtype)
-print(arr)
 
 
