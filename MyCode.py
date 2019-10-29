@@ -1,24 +1,14 @@
 
-#By Ref
-def func1(x):
-    print(id(x))
-    x[1] = 30
-    print("x " ,x)
-    print(id(x))
+def add(*b):
+    c = 0
+    for i in b:
+        c += i
+    print(c)
 
-lst = [ 10, 12, 14]
-print(id(lst))
-func1(lst)
-print("a ", lst)
+add(10, 5, 6, 7, 8)
 
-#By Val
-def func0(x):
-    print(id(x))
-    x = 10
-    print("x " ,x)
-    print(id(x))
+def one(name, age = 18):
+    print(name)
+    print((age - 1) /2)
 
-a = 20
-print(id(a))
-func0(a)
-print( "a ", a)
+one(name='al Mohamady')
