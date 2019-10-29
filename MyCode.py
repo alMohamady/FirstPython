@@ -1,25 +1,20 @@
-from numpy import *
+def hello():
+    print("Hello World")
+    print("Al Mohamady")
 
-mat = array([
-            [1, 2, 3, 7, 8, 9],
-            [4, 5, 6, 11, 12, 13]
-            ])
+hello()
 
-m1 = matrix("1 2 3 ; 4 5 6 ; 7 8 9")
-m2 = matrix("1 2 3 ; 4 5 6 ; 7 8 9")
+def add(x, y):
+    n = x + y
+    return n
 
-m3 = m1 + m2
-print(m3)
-print(m1.min())
-print(diagonal(m1))
-mat2 = mat.flatten()
-mat3 = mat.reshape(2, 2, 3)
+def add_sub(x, y):
+    n = x + y
+    x = x - y
+    return n, x
 
-print(mat3)
-
-print(mat)
-print(mat2)
-print(mat.shape)
-print(mat.size)
-print(mat.ndim)
-
+z, b = add_sub(20, 12)
+print("add :",z)
+print("sub :",b)
+print(add(5, 3) + 2)
+print("MY CODE")
