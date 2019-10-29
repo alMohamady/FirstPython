@@ -1,19 +1,31 @@
+import sys
 
+sys.setrecursionlimit(2000)
+print(sys.getrecursionlimit())
 
-def countList(lst):
-    even = 0
-    odd = 0
+count = 0
 
-    for i in lst:
-        if i % 2 == 0:
-            even += i
-        else:
-            odd += i
-    return even, odd
+def func():
+    global count
+    print("Hello world " , count)
+    count += 1
+    func()
 
+func()
 
-lst = [1, 2, 3, 4, 5, 6, 7]
-even, odd = countList(lst)
+#fibonacci sequence
+def func(max):
 
-print(even)
-print(odd)
+    x = 0
+    y = 1
+
+    print(x)
+    print(y)
+
+    for i in range(2, max):
+        z = x + y
+        x = y
+        y = z
+        print(z)
+
+func(20)
