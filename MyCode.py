@@ -1,14 +1,8 @@
 
-def add(*b):
-    c = 0
-    for i in b:
-        c += i
-    print(c)
-
-add(10, 5, 6, 7, 8)
-
-def one(name, age = 18):
+def person(name, **data):
     print(name)
-    print((age - 1) /2)
+    print(data)
+    for a,b in data.items():
+        print(a, b)
 
-one(name='al Mohamady')
+person("ahmed", age=33, secound="Mohamady", length=185.5)
