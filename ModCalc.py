@@ -1,13 +1,12 @@
+def add():
+    print("func add from calc")
 
+def sub():
+    print("func sub from calc")
 
-def add(a, b):
-    return a + b
+def main():
+    add()
+    sub()
 
-def sub(a, b):
-    return a - b
-
-def multi(a, b):
-    return a * b
-
-def div(a, b):
-    return a / b
+if __name__ == "__main__":
+    main()
