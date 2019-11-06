@@ -1,15 +1,23 @@
-from ModCalc import add
-
-def fun1():
-    add()
-    print("hi fun 1")
-
-def fun2():
-    print("hi fun 2")
 
 
-def main():
-    fun1();
-    fun2();
+class Car:
 
-main()
+    x = 1
+
+    def drive(self):
+        print("Driving the car")
+
+
+a = 8
+polo = Car()
+mini = Car()
+
+#Car.drive(polo)
+#Car.drive(mini)
+
+polo.drive()
+mini.drive()
+
+print(type(a))
+a.bit_length()
+print(type(polo))
