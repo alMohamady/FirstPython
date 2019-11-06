@@ -1,31 +1,19 @@
-import sys
+from functools import reduce
 
-sys.setrecursionlimit(2000)
-print(sys.getrecursionlimit())
+def func(a, b):
+    return a * b;
+#result = lambda a, b : a * b
+#print(result(2, 3))
 
-count = 0
+def isEven(n):
+    return n % 2 == 0
 
-def func():
-    global count
-    print("Hello world " , count)
-    count += 1
-    func()
+nums = [3, 2, 8, 7, 9, 10, 12, 20]
+eN = list(filter(lambda n: n % 2 == 0, nums))
+print(eN)
 
-func()
+doulbles = list(map(lambda n: n * 2, nums))
+print(doulbles)
 
-#fibonacci sequence
-def func(max):
-
-    x = 0
-    y = 1
-
-    print(x)
-    print(y)
-
-    for i in range(2, max):
-        z = x + y
-        x = y
-        y = z
-        print(z)
-
-func(20)
+sum = reduce(lambda a, b: a + b, nums)
+print(sum)
