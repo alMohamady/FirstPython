@@ -1,19 +1,16 @@
-from functools import reduce
 
-def func(a, b):
-    return a * b;
-#result = lambda a, b : a * b
-#print(result(2, 3))
+def div(a, b):
+    return a / b
 
-def isEven(n):
-    return n % 2 == 0
+def smart_div(func):
 
-nums = [3, 2, 8, 7, 9, 10, 12, 20]
-eN = list(filter(lambda n: n % 2 == 0, nums))
-print(eN)
+    def inner(c, e):
+        if e > c:
+            c, e = e, c
+        return func(c, e)
 
-doulbles = list(map(lambda n: n * 2, nums))
-print(doulbles)
+    return inner
 
-sum = reduce(lambda a, b: a + b, nums)
-print(sum)
+div = smart_div(div)
+
+print (div (10, 5))
