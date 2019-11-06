@@ -2,18 +2,25 @@
 
 class Car:
 
-    def __init__(self, name, speed):
-        print("Hello there ", name, speed)
-        self.name = name
-        self.speed = speed
+    def __init__(self):
+        self.name = "golf"
+        self.speed = 180
 
-    def drive(self):
-        print("Driving the car", self.name, self.speed)
+    def update(self):
+        self.name = "passat"
 
+    def compare(self, other):
+        if self.name == other.name:
+            return True
+        else:
+            return False
 
-a = 8
-polo = Car("polo", 180)
-mini = Car("mini", 200)
+polo = Car()
+mini = Car()
 
-polo.drive()
-mini.drive()
+print(polo.name)
+print(mini.name)
+
+if polo.compare(mini):
+    print("they are same")
+
