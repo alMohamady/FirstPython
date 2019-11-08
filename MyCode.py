@@ -1,20 +1,28 @@
 
 
-class Car:
+class Student:
 
-    seats = 4
+    School = "MSC"
 
-    def __init__(self):
-        self.name = "golf"
-        self.speed = 180
+    def __init__(self, math, science, lang):
+        self.math = math
+        self.science = science
+        self.lang = lang
+
+    def avg(self):
+        return (self.math + self.science + self.lang) / 3
+
+    def get_math(self):
+        return self.math
+
+    def set_math(self, math):
+        self.math = math
+
+    @classmethod
+    def get_info(cls):
+        return cls.School
 
 
-polo = Car()
-mini = Car()
-
-Car.seats = 2
-
-print(polo.seats)
-print(mini.seats)
+print(Student.get_info())
 
 
