@@ -1,29 +1,24 @@
 
+class Father:
 
-class Car:
+    def func1(self):
+        print("Father Func 1")
 
-    def __init__(self, model, kilos, cc, liters):
-        self.model = model
-        self.kilos = kilos
-        self.engine = self.Engine(cc, liters)
+    def func2(self):
+        print("Father Func 2")
 
-    def show(self):
-        print(self.model, self.kilos)
-        print(self.engine.show())
+class Son(Father):
 
+    def func3(self):
+        print("son Func 3")
 
-    class Engine:
+    def func4(self):
+        print("son Func 4")
 
-        def __init__(self, cc, liters):
-            self.cc = cc
-            self.liters = liters
+class SonOfSon(Son):
 
-        def show(self):
-            print(self.cc, self.liters)
+       def printSon(self):
+           print("son of son Func")
 
-
-mini = Car("MINI", 120, 1200, 40)
-eng = Car.Engine(1600, 80)
-
-print(eng.show())
-
+Mohamed = SonOfSon()
+Mohamed.func1()
