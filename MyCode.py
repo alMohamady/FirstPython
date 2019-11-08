@@ -1,28 +1,29 @@
 
 
-class Student:
+class Car:
 
-    School = "MSC"
+    def __init__(self, model, kilos, cc, liters):
+        self.model = model
+        self.kilos = kilos
+        self.engine = self.Engine(cc, liters)
 
-    def __init__(self, math, science, lang):
-        self.math = math
-        self.science = science
-        self.lang = lang
-
-    def avg(self):
-        return (self.math + self.science + self.lang) / 3
-
-    def get_math(self):
-        return self.math
-
-    def set_math(self, math):
-        self.math = math
-
-    @classmethod
-    def get_info(cls):
-        return cls.School
+    def show(self):
+        print(self.model, self.kilos)
+        print(self.engine.show())
 
 
-print(Student.get_info())
+    class Engine:
 
+        def __init__(self, cc, liters):
+            self.cc = cc
+            self.liters = liters
+
+        def show(self):
+            print(self.cc, self.liters)
+
+
+mini = Car("MINI", 120, 1200, 40)
+eng = Car.Engine(1600, 80)
+
+print(eng.show())
 
