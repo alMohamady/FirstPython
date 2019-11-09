@@ -1,39 +1,34 @@
 
+class Father:
 
-class Student:
+      def info(self):
+          print("Father Info")
+
+class Student(Father):
 
     def __init__(self, m1, m2):
         self.m1 = m1
         self.m2 = m2
 
-    def __add__(self, other):
-        m1 = self.m1 + other.m1
-        m2 = self.m2 + other.m2
-        stu = Student(m1, m2)
-        return stu
+    def info(self):
+        super().info()
+        print("Son Info")
 
-    def __gt__(self, other):
-        r1 = self.m1 + self.m2
-        r2 = other.m1 + other.m2
-        if r1 > r2:
-            return True
-        else:
-            return False
+    def sum(self, a=None, b=None, c=None):
 
-    def __str__(self):
-        return " {} and {} ".format(self.m1, self.m2)
+        if a != None and b != None and c != None:
+            d = a + b + c
+        elif  a != None and b != None:
+            d = a + b
+        elif  a != None:
+            d = a
 
-ahmed = Student(100, 90)
-mohmed = Student(180, 50)
+        return d
 
-stu = ahmed + mohmed
-print(stu.m1, stu.m2)
+st= Student(1, 2)
 
-if ahmed > mohmed:
-    print("ahemd  wins")
-else:
-    print("mohamed wins")
+print(st.info())
 
-a = 10
-print(a.__str__())
-print(ahmed.__str__())
+print(st.sum(1+2+3))
+print(st.sum(1+2))
+print(st.sum(1))
