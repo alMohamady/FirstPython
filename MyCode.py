@@ -1,33 +1,39 @@
 
-class A:
 
-    def __init__(self):
-        print("this is init A")
+class Student:
 
-    def func1(self):
-        print ("this is func a1")
+    def __init__(self, m1, m2):
+        self.m1 = m1
+        self.m2 = m2
 
-    def func2(self):
-        print ("this is func a2")
+    def __add__(self, other):
+        m1 = self.m1 + other.m1
+        m2 = self.m2 + other.m2
+        stu = Student(m1, m2)
+        return stu
 
-class B:
+    def __gt__(self, other):
+        r1 = self.m1 + self.m2
+        r2 = other.m1 + other.m2
+        if r1 > r2:
+            return True
+        else:
+            return False
 
-    def __init__(self):
-        print("this is init B")
+    def __str__(self):
+        return " {} and {} ".format(self.m1, self.m2)
 
-    def func3(self):
-        print("this is func b3")
+ahmed = Student(100, 90)
+mohmed = Student(180, 50)
 
-    def func4(self):
-        print("this is func b4")
+stu = ahmed + mohmed
+print(stu.m1, stu.m2)
 
-class C(A,B):
+if ahmed > mohmed:
+    print("ahemd  wins")
+else:
+    print("mohamed wins")
 
-    def __init__(self):
-        super().__init__()
-        print("this is init C")
-
-    def func5(self):
-        print("this is func c5")
-
-obj = C()
+a = 10
+print(a.__str__())
+print(ahmed.__str__())
