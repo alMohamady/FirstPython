@@ -1,23 +1,19 @@
 
-class TopTen:
+a = 10
+b = 2
 
-    def __init__(self):
-        self.num = 1
+try:
+    print("connection Open")
+    print(a / b)
+    num = int(input("Enter the number"))
+    print(num)
+except ZeroDivisionError as ex:
+    print("div on 0 not allowed", ex)
+except ValueError as ex:
+    print("Invalid Input", ex)
+except Exception as ex:
+    print("General Error")
+finally:
+    print("connection Close")
 
-    def __iter__(self):
-        return self
-
-    def __next__(self):
-        if self.num <= 10:
-            value = self.num
-            self.num += 1
-            return value
-        else:
-            raise StopIteration
-
-ten = TopTen()
-
-print( "From print ", ten.__next__())
-print( "From print 2", ten.__next__())
-for i in ten:
-    print(i)
+print("Hello")
