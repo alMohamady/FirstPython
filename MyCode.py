@@ -1,24 +1,20 @@
 
-class Father:
+class Duck:
 
-    def func1(self):
-        print("Father Func 1")
+    def quack(self):
+        print("duck is quacking")
 
-    def func2(self):
-        print("Father Func 2")
+class Hen:
 
-class Son(Father):
+    def quack(self):
+        print("hen is quacking")
 
-    def func3(self):
-        print("son Func 3")
+class Farm:
 
-    def func4(self):
-        print("son Func 4")
+    def getSound(self, animal):
+        animal.quack()
 
-class SonOfSon(Son):
-
-       def printSon(self):
-           print("son of son Func")
-
-Mohamed = SonOfSon()
-Mohamed.func1()
+myFarm = Farm()
+d = Duck()
+h = Hen()
+myFarm.getSound(h)
