@@ -1,34 +1,23 @@
 
-class Father:
+class TopTen:
 
-      def info(self):
-          print("Father Info")
+    def __init__(self):
+        self.num = 1
 
-class Student(Father):
+    def __iter__(self):
+        return self
 
-    def __init__(self, m1, m2):
-        self.m1 = m1
-        self.m2 = m2
+    def __next__(self):
+        if self.num <= 10:
+            value = self.num
+            self.num += 1
+            return value
+        else:
+            raise StopIteration
 
-    def info(self):
-        super().info()
-        print("Son Info")
+ten = TopTen()
 
-    def sum(self, a=None, b=None, c=None):
-
-        if a != None and b != None and c != None:
-            d = a + b + c
-        elif  a != None and b != None:
-            d = a + b
-        elif  a != None:
-            d = a
-
-        return d
-
-st= Student(1, 2)
-
-print(st.info())
-
-print(st.sum(1+2+3))
-print(st.sum(1+2))
-print(st.sum(1))
+print( "From print ", ten.__next__())
+print( "From print 2", ten.__next__())
+for i in ten:
+    print(i)
