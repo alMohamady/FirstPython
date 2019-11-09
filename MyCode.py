@@ -1,20 +1,33 @@
 
-class Duck:
+class A:
 
-    def quack(self):
-        print("duck is quacking")
+    def __init__(self):
+        print("this is init A")
 
-class Hen:
+    def func1(self):
+        print ("this is func a1")
 
-    def quack(self):
-        print("hen is quacking")
+    def func2(self):
+        print ("this is func a2")
 
-class Farm:
+class B:
 
-    def getSound(self, animal):
-        animal.quack()
+    def __init__(self):
+        print("this is init B")
 
-myFarm = Farm()
-d = Duck()
-h = Hen()
-myFarm.getSound(h)
+    def func3(self):
+        print("this is func b3")
+
+    def func4(self):
+        print("this is func b4")
+
+class C(A,B):
+
+    def __init__(self):
+        super().__init__()
+        print("this is init C")
+
+    def func5(self):
+        print("this is func c5")
+
+obj = C()
